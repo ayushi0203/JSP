@@ -1,0 +1,253 @@
+<html>
+    <head>
+        <title>Customer Registration Form</title>
+        <style type="text/css">
+            <!--
+            .style36 {font-family: Verdana, Arial, Helvetica, sans-serif}
+            .style37 {font-size: 9pt}
+            .style39 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            font-weight: bold;
+            }
+            .style1 {	font-size: 7ex;
+            font-weight: bold;
+            color: #FF0000;
+            font-style: italic;
+            }
+            -->
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+
+            function validate()
+            {
+            var userid=document.frmreg.txtuserid.value;
+            var password=document.frmreg.txtpassword.value;
+            var confirm=document.frmreg.txtconfirm.value;
+            var firstname=document.frmreg.txtfirstname.value;
+            var lastname=document.frmreg.txtlastname.value;
+            var age=document.frmreg.txtage.value;
+            var telephone=document.frmreg.txtphoneno.value;
+            var mobile=document.frmreg.txtmobileno.value;
+            var email=document.frmreg.txtemail.value;
+            var address=document.frmreg.txtaddress.value;
+            var pincode=document.frmreg.txtpincode.value;
+            var annualincome=document.frmreg.txtannualincome.value;
+
+            if(userid.length==0)
+            {
+            alert("User Id Field Cannot be Left Blank");
+            document.frmreg.txtuserid.focus();
+            return false;
+            }
+            else if(password.length==0)
+            {
+            alert("password Field Cannot be Left Blank");
+            document.frmreg.txtpassword.focus();
+            return false;
+            }
+            else if(confirm.length==0)
+            {
+            alert("Confirm Password Field Cannot be Left Blank");
+            document.frmreg.confirm.focus();
+            return false;
+            }
+            else if(password!=confirm)
+            {
+            alert("Password and Confirm Password Does not Match");
+            document.frmreg.txtpassword.focus();
+            return false;
+            }
+            else if(password.length < 6 || password.length > 10)
+            {
+            alert("Password length Should be \n Between 6 to 10 characters");
+            document.frmreg.txtpassword.focus();
+            return false;
+            }
+            else if(firstname.length==0)
+            {
+            alert("FirstName Field Cannot be Left Blank");
+            document.frmreg.txtfirstname.focus();
+            return false;
+            }
+            else if(lastname.length==0)
+            {
+            alert("Last Name Field Cannot be Left Blank");
+            document.frmreg.txtlastname.focus();
+            return false;
+            }
+            else if(age.length==0)
+            {
+            alert("Age Field Cannot be Left Blank");
+            document.frmreg.txtage.focus();
+            return false;
+            }
+            else if(isNaN(age))
+            {
+            alert("Age Field Should contain Numbic Values");
+            document.frmreg.txtage.focus();
+            return false;
+            }
+            else if(age<15 || age>80)
+            {
+            alert("Age Should be between 15 to 80 yrs");
+            document.frmreg.txtage.focus();
+            return false;
+            }
+            else if(telephone.length==0)
+            {
+            alert("Telephone Number Field Cannot be Left Blank");
+            document.frmreg.txtphoneno.focus();
+            return false;
+            }
+            else if(isNaN(telephone))
+            {
+            alert("Telephone Number  Field Should Contain Numeric Values");
+            document.frmreg.txtphoneno.focus();
+            return false;
+            }
+            else if(isNaN(mobile))
+            {
+            alert("Mobile Number Field Should Contain Numeric Values");
+            document.frmreg.txtmobileno.focus();
+            return false;
+            }
+            else if(email.length==0)
+            {
+            alert("Email Field Cannot be Left Blank");
+            document.frmreg.txtemail.focus();
+            return false;
+            }
+            else if(email.indexOf(".")==-1 || email.indexOf("@")==-1)
+            {
+            alert("Please Enter a Valid Email Address");
+            document.frmreg.txtemail.focus();
+            return false;
+            }
+            else if(email.indexOf(".") < email.indexOf("@"))
+            {
+            alert("Please Enter a Valid Email Address");
+            document.frmreg.txtemail.focus();
+            return false;
+            }
+            else if(address.length==0)
+            {
+            alert("Address Field cannot be left blank");
+            document.frmreg.txtaddress.focus();
+            return false;
+            }
+            else if(pincode.length==0)
+            {
+            alert("Pincode Field cannot be left blank");
+            document.frmreg.txtpincode.focus();
+            return false;
+            }
+            else if(isNaN(pincode))
+            {
+            alert("Pincode Field should contain Numberic values");
+            document.frmreg.txtpincode.focus();
+            return false;
+            }
+            else if(pincode.length!=6)
+            {
+            alert("Please enter a valid Pincode");
+            document.frmreg.txtpincode.focus();
+            return false;
+            }
+            else if(annualincome.length==0)
+            {
+            alert("Annual Income Field cannot be left blank");
+            document.frmreg.txtannualincome.focus();
+            return false;
+            }
+            else if(isNaN(annualincome))
+            {
+            alert("Annual Income Field Should contain Numeric values");
+            document.frmreg.txtannualincome.focus();
+            return false;
+            }
+            else
+            {
+            alert("Updating User Details...");
+            return true;
+            }
+            }
+        </script>
+    </head>
+
+    <body>
+        <span class="style1">Welcome to Shop Stop</span><br>
+        <form action="/WebApplication01/CustomerRegistration.jsp" method="post" name="frmreg" onSubmit="return validate();">
+            <table width="80%"  border="0" align="center">
+                <tr align="center" valign="top">
+                    <td colspan="2"><h1><em><strong>Customer Registration Form</strong></em></h1></td>
+                </tr>
+                <tr>
+                    <td width="25%"><span class="style23 style36 style37"><strong>User Id: </strong></span></td>
+                    <td width="75%"><input name="txtuserid" type="text" id="txtuserid" size="45" maxlength="35"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Password:</strong></span></td>
+                    <td><input name="txtpassword" type="password" id="txtpassword" size="12" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Confirm Password : </strong></span></td>
+                    <td><input name="txtconfirm" type="password" id="txtconfirm" size="12" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>First Name:</strong></span></td>
+                    <td><input name="txtfirstname" type="text" id="txtfirstname" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Last Name: </strong></span></td>
+                    <td><input name="txtlastname" type="text" id="txtlastname" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Gender: </strong></span></td>
+                    <td class="style39">        <input name="rbgender" type="radio" value="Male" checked>
+                    Male
+                    <input name="rbgender" type="radio" value="Female">
+                    Female</td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Age: </strong></span></td>
+                    <td class="style39"><input name="txtage" type="text" id="txtage" size="3" maxlength="2">
+                    Yrs.</td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Telephone Number: </strong></span></td>
+                    <td><input name="txtphoneno" type="text" id="txtphoneno" size="12" maxlength="11"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Mobile Number: </strong></span></td>
+                    <td><input name="txtmobileno" type="text" id="txtmobileno" size="15" maxlength="11"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>E-mail:</strong></span></td>
+                    <td><input name="txtemail" type="text" id="txtemail" size="40" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Address:</strong></span></td>
+                    <td><input name="txtaddress" type="text" id="txtaddress" size="40" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Pincode:</strong></span></td>
+                    <td><input name="txtpincode" type="text" id="txtpincode" size="7" maxlength="6"></td>
+                </tr>
+                <tr>
+                    <td><span class="style23 style36 style37"><strong>Annual Income: </strong></span></td>
+                    <td><input name="txtannualincome" type="text" id="txtannualincome" size="9" maxlength="7"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;      </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input name="Submit" type="submit" value="Submit">
+                    <input type="reset" name="Reset" value="Reset "></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
