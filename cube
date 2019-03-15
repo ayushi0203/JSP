@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<jsp:useBean id="cube" scope="session" class="beans.CubeBean" />
+<jsp:setProperty name="cube" property="num" value="2" />
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="#ffffff">
+<h1> Cube of a number </h1>
+
+<b>Cube of a number:</b>
+<jsp:getProperty name="cube" property="num"/>
+
+</body>
+</html>
