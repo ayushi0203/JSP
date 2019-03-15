@@ -1,0 +1,1 @@
+insert into customerregister (UserId,Password,Confirm,FirstName,LastName,Gender,Age,TelephoneNo,MobileNo,Email,Address,Pincode,AnnualIncome) values(1,'123456','123456',customerregister'ayu','shi','Female','22','123456','123456','a@gmail.com','alpha2','201301','350000');
