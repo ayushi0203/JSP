@@ -1,0 +1,14 @@
+<h1> Response Implicit Objects</h1>
+<% 
+String uid=request.getParameter("id"); 
+String password=request.getParameter("pass"); 
+session.setAttribute("session-uid", uid);
+if(uid.equals("Chaitanya") && password.equals("BeginnersBook"))
+{
+ response.sendRedirect("success.jsp");
+}
+else
+{
+ response.sendRedirect("failed.jsp");
+}
+%> 
