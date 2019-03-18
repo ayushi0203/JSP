@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<%
+pageContext.setAttribute("color","#66FFFF");
+
+pageContext.setAttribute("size","12");
+pageContext.setAttribute("textclr","Blue");
+pageContext.setAttribute("foregr","Red");
+%>
+<body bgcolor='${pageScope.color }'
+text="${pageScope.textclr }">
+<h1>Use of implicit objects in EL.</h1>
+<font color="${pageScope.foregr }" size="${pageScope.size }">
+Background color and text color changed</font>
+
+</body>
+</html>
