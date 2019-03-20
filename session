@@ -1,0 +1,2 @@
+request.getSession(true);
+	  session.setMaxInactiveInterval(10);
