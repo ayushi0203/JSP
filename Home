@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="boxed" border=1>
+<form action="Page1.jsp"> 
+Username:<input type="text" name="uname"/>
+		<br/><br/>
+		Password:<input type="password" name="password"/><br><br/><br/>
+<input type="submit" value="Login"/> 
+
+</form>
+ </div>
+</body>
