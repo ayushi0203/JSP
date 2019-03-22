@@ -1,0 +1,32 @@
+package com.niit.hiber;
+import org.hibernate.Transaction;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Session;
+
+public class UserDao {
+
+	public static void main(String[] args) {
+
+	Session session = new Configuration().
+			configure().buildSessionFactory().openSession();
+	Transaction t= session.beginTransaction();
+	
+User u1 = new User();
+
+	
+
+	u1.setName("Shre");
+
+	u1.setPassword("Shriv");
+
+	u1.setEmail("abc@gmail.com");
+
+	
+
+	session.save(u1);
+t.commit();
+	System.out.println("Successfully Saved");
+}
+}
