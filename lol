@@ -1,19 +1,18 @@
-<title>Spring MVC </title>
+<title>Spring MVC Tutorial  Hello World Spring MVC
+	</title>
 <style type="text/css">
 body {
-	background-color:aqua;
+	
 }
 </style>
 </head>
-<body>
+<body>${message}
+ 
 	<br>
-	<div style="text-align: center">
-		<h2>
-			Hey You..!! This is your 1st Spring MCV Project..<br> <br>
-		</h2>
-		<h3>
-			<a href="welcome.html">Click here to See Welcome Message... </a>(to
-			check Spring MVC Controller... @RequestMapping("/welcome"))
-		</h3>
+	<br>
+	<div
+		style="font-family: verdana; padding: 10px; border-radius: 10px; font-size: 12px; text-align: center;">
+ 
+		<h1>Welcome Spring MCV Tutorial</h1>
 	</div>
 </body>
