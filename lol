@@ -1,10 +1,19 @@
-<p>
-Is 1 less than 2? ${1<2} <br>
-Does 5 equals 5? ${5==5}<br> 
-Is 6 greater then 7? ${6 gt 7 } <br>
-<p>Now for some math:<br>
-6+7=${6+7}<br>
-8*9=${8*9 }<br>
-<hr> You appear to be using the following browser: ${ header ["user-agent"] }
+<title>Spring MVC </title>
+<style type="text/css">
+body {
+	background-color:aqua;
+}
+</style>
+</head>
+<body>
+	<br>
+	<div style="text-align: center">
+		<h2>
+			Hey You..!! This is your 1st Spring MCV Project..<br> <br>
+		</h2>
+		<h3>
+			<a href="welcome.html">Click here to See Welcome Message... </a>(to
+			check Spring MVC Controller... @RequestMapping("/welcome"))
+		</h3>
+	</div>
 </body>
-</html>
